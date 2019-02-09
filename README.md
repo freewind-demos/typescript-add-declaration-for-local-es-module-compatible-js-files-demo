@@ -39,5 +39,7 @@ console.log(`Hello, ${util.toUpper('typescript')}`);
 
 需要注意的是：
 
-- 我们可以使用typescript的`esModuleInterop:true`来简化`import`的写法，去掉`* as`（见另一个demo）
-- 如果`./util.js`是一个与es-module不兼容的模块，则当前代码无法编译，需要特别的处理。（见另一个demo）
+- 我们可以使用typescript的`esModuleInterop:true`来简化`import`的写法，去掉`* as`（见其它demo）
+- 如果`./util.js`是一个与es-module不兼容的模块，则当前代码无法编译，需要特别的处理。（见其它demo）
+  - 可以使用`import util = require('./util')`语法
+  - 或者增加`esModuleInterop:true`后，使用`import util from './util'`语法（必须不不不加`* as`）
